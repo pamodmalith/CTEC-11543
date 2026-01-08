@@ -1,27 +1,21 @@
 #include <stdio.h>
 
-void main()
+int main()
 {
   int x, y, z;
-  printf("Enter thre integers to find largest(10 15 20): ");
+  printf("Enter three integers to find largest(10 15 20): ");
   scanf("%d %d %d", &x, &y, &z);
-  if (x > y)
+  if (x >= z && x >= y)
   {
-    if (x > z)
-    {
-      printf("Largest value among you entered is: %d\n", x);
-    }
-    else
-    {
-      printf("Largest value among you entered is: %d\n", z);
-    }
+    printf("Largest value among you entered is: %d\n", x);
   }
-  else if (y > z)
+  else if (y >= z && y >= x)
   {
     printf("Largest value among you entered is: %d\n", y);
   }
   else
   {
-    printf("Largest value among you entered is: %d\n", z);
+    printf("Largest value is: %d\n", z);
   }
+  return 0;
 }
